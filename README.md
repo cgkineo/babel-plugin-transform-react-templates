@@ -21,7 +21,7 @@ yarn add babel-plugin-transform-react-templates --dev
 Code:
 ```js
 // src/reactTemplateHelpers.js
-export default register(template, component) {
+export default function register(template, component) {
   templates[template] = component;
 }
 
