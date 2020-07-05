@@ -20,13 +20,28 @@ yarn add babel-plugin-transform-react-templates --dev
 
 Code:
 ```js
-// src/reactTemplateRegister.js
-
+// src/reactTemplateHelpers.js
 export default register(template, component) {
   templates[template] = component;
 }
 
 export const templates = {};
+```
+```js
+// src/templates/test.jsx
+export default (data) => {
+  return <div className="test">
+    {data.testText}
+  </div>
+}
+```
+```js
+// src/main.js
+import { templates } from 'src/reactTemplateHelpers';
+
+ReactDOM.render(templates('test', {
+  testText: 'testing text'
+}), '#app');
 
 ```
 With options:
@@ -39,7 +54,7 @@ plugins: [
         // Any jsx file nested inside a templates folder
         '**/templates/**/*.jsx'
       ],
-      importRegisterFunctionFromModule: 'src/reactTemplateRegister.js',
+      importRegisterFunctionFromModule: 'src/reactTemplateHelpers.js',
       registerFunctionName: 'register',
       registerTemplateName: (moduleId) => {
         // Use filename as template name
