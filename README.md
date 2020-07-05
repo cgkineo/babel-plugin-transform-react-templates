@@ -64,3 +64,5 @@ plugins: [
   ]
 ]
 ```
+Notes:
+You must inject the template paths if you want them to appear automatically or include them in a normal import.
