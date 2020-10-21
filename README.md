@@ -39,7 +39,7 @@ export default (data) => {
 // src/main.js
 import { templates } from 'src/reactTemplateHelpers';
 
-ReactDOM.render(templates('test', {
+ReactDOM.render(templates['test']({
   testText: 'testing text'
 }), '#app');
 
