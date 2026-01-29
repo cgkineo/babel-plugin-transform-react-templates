@@ -19,6 +19,7 @@ yarn add babel-plugin-transform-react-templates --dev
 ## Usage
 
 Code:
+
 ```js
 // src/reactTemplateHelpers.js
 export default function register(template, component) {
@@ -27,6 +28,7 @@ export default function register(template, component) {
 
 export const templates = {};
 ```
+
 ```js
 // src/templates/test.jsx
 export default (data) => {
@@ -35,6 +37,7 @@ export default (data) => {
   </div>
 }
 ```
+
 ```js
 // src/main.js
 import { templates } from 'src/reactTemplateHelpers';
@@ -44,7 +47,9 @@ ReactDOM.render(templates['test']({
 }), '#app');
 
 ```
+
 With options:
+
 ```js
 plugins: [
   [
@@ -64,5 +69,6 @@ plugins: [
   ]
 ]
 ```
+
 Notes:
 You must inject the template paths if you want them to appear automatically or include them in a normal import.
