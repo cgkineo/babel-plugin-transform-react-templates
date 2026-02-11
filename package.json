@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/cgkineo/babel-plugin-transform-react-templates"
   },
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Babel plugin to register react templates with a global function",
   "license": "MIT",
   "main": "src/index.js",
